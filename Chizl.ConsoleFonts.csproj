@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+		<PropertyGroup>
+				<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+				<!--<TargetFrameworks>netstandard2.0;netstandard2.1;net47;net48;net6.0;net8.0;net9.0</TargetFrameworks>-->
+				<ImplicitUsings>disable</ImplicitUsings>
+				<Nullable>disable</Nullable>
+				<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+				<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		</PropertyGroup>
+
+		<PropertyGroup>
+				<Authors>Chizl</Authors>
+				<PackageId>Chizl.ConsoleFonts</PackageId>
+				<Company>Chizl.com</Company>
+				<Copyright>© 2024 chizl.com</Copyright>
+				<PackageTags>console;font-style;font-color;emoji</PackageTags>
+				<FileVersion>4.12.12.2230</FileVersion>
+				<Version>4.12.12.0</Version>
+				<AssemblyVersion>4.12.0.0</AssemblyVersion>
+		</PropertyGroup>
+
+		<ItemGroup>
+		  <Compile Remove="FontDemo\**" />
+		  <None Remove="FontDemo\**" />
+		</ItemGroup>
+
+		<ItemGroup>
+		  <Compile Update="ConsoleResources.Designer.cs">
+		    <DesignTime>True</DesignTime>
+		    <AutoGen>True</AutoGen>
+		    <DependentUpon>ConsoleResources.resx</DependentUpon>
+		  </Compile>
+		</ItemGroup>
+
+		<ItemGroup>
+		  <EmbeddedResource Update="ConsoleResources.resx">
+		    <Generator>ResXFileCodeGenerator</Generator>
+		    <LastGenOutput>ConsoleResources.Designer.cs</LastGenOutput>
+		  </EmbeddedResource>
+		</ItemGroup>
+
+</Project>

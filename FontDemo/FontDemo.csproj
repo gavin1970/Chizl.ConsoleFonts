@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+		<PropertyGroup>
+				<OutputType>Exe</OutputType>
+				<TargetFramework>net8.0</TargetFramework>
+				<ImplicitUsings>disable</ImplicitUsings>
+				<Nullable>disable</Nullable>
+				<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+				<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		</PropertyGroup>
+
+		<ItemGroup>
+		  <ProjectReference Include="..\Chizl.ConsoleFonts.csproj" />
+		</ItemGroup>
+
+</Project>
