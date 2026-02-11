@@ -15,9 +15,9 @@
 				<Company>Chizl.com</Company>
 				<Copyright>© 2024 chizl.com</Copyright>
 				<PackageTags>console;font-style;font-color;emoji</PackageTags>
-				<FileVersion>4.12.12.2230</FileVersion>
-				<Version>4.12.12.0</Version>
-				<AssemblyVersion>4.12.0.0</AssemblyVersion>
+				<FileVersion>6.02.11.2203</FileVersion>
+				<Version>6.02.11.0</Version>
+				<AssemblyVersion>6.02.0.0</AssemblyVersion>
 		</PropertyGroup>
 
 		<ItemGroup>

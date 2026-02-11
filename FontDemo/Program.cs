@@ -12,12 +12,14 @@ namespace FontDemo
 
         const string _styleStructNamespace = "Chizl.ConsoleFonts";
         const string _styleStructName = "FontStyles";
-
         const string _clearScreen = "\u001bc\x1b[3J";
 
         static void Main(string[] args)
         {
             Console.OutputEncoding = _defaultEncoding;
+            Console.WriteLine($" This is my {FontStyles.Blink}Blinking {FontStyles.Invert}Inverted{FontStyles.Reset} text.");
+            ReadKey("Press any key to see all.");
+
             ClearScreen();
             FontDemo();
         }

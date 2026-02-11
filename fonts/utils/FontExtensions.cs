@@ -46,20 +46,21 @@ namespace Chizl
         /// <summary>
         /// Creates the ascii escape characters needed to create the style requested.
         /// </summary>
-        //internal static string UTF32String(this EmojiEx @this) => @this.Value() <= 0 ? "" : char.ConvertFromUtf32(@this.Value());
+        internal static string UTF32String(this int @this) => @this <= 0 ? "" : char.ConvertFromUtf32(@this);
         /// <summary>
-        /// Creates the ascii escape characters needed to create the style requested.
-        /// </summary>
-        //internal static string UTF32String(this VariationSelectors @this) => char.ConvertFromUtf32(@this.Value());
-        /// <summary>
-        /// Takes a RGB Hex string and clean it up.
+        /// Takes a RGB Hex string and clean it up and returns a 8 byte Hex string.<br/>
+        /// AARRGGBB e.g. (Green) FF00FF00.<br/>
+        /// If the input is not a valid RGB Hex string, then it returns the input string.<br/>
         /// </summary>
         /// <param name="input">String to validate</param>
-        /// <param name="addHash">Add initial hash "#"</param>
+        /// <param name="addHash">(Default: false) - Adds initial hash "#"</param>
         /// <returns>8 byte Hex string.  AARRGGBB/#AARRGGBB e.g. (Green) FF00FF00/#FF00FF00</returns>
-        internal static string ColorHex(this string input, bool addHash = false)
+        internal static string ValidColorHex(this string input, bool addHash = false)
         {
-            var r = new Regex("[^a-f0-9]", _regexOptions);
+            //Strips everything not a-f, A-F or 0-9.
+            //This is to clean up any hex string that may have been passed in.
+            //For example, if the user passed in "#FF00FF00" or "0xFF00FF00", this will strip the non hex characters and return "FF00FF00".
+            var r = new Regex("[^a-fA-F0-9]", _regexOptions);
             var retVal = r.Replace(input, "");
 
             //if not 6 or 8 bytes, then this is an invalid RGB Hex string.

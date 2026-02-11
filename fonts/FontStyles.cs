@@ -90,6 +90,15 @@
         /// </code>
         /// </summary>
         public static FontStyles Strike => new FontStyles(FontStyleEx.STRIKE);
+        /// <summary>
+        /// Returns the Ascii Escape, make following text have 2 underlines.<br/>
+        /// Will persist until Reset is called.<br/>
+        /// <code>
+        /// Console.WriteLine($"This is my {<b>FontStyle.DOUBLE_UNDERLINE</b>}DOUBLE UNDERLINE{FontStyle.Reset} format.");
+        /// </code>
+        /// </summary>
+        public static FontStyles DOUBLE_UNDERLINE => new FontStyles(FontStyleEx.DOUBLE_UNDERLINE);
+        
 
         #region Private Constructor
         private FontStyles(FontStyleEx style)

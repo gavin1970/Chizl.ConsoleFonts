@@ -11,5 +11,6 @@
         INVERT = 7,
         INVISIBLE = 8,
         STRIKE = 9,
+        DOUBLE_UNDERLINE = 21,
     }
 }
