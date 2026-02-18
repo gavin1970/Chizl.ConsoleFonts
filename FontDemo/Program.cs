@@ -2,7 +2,7 @@
 using System.Text;
 using System.Linq;
 using System.Reflection;
-using Chizl.ConsoleFonts;
+using static Chizl.ConsoleFonts.FontStyles;
 
 namespace FontDemo
 {
@@ -17,7 +17,7 @@ namespace FontDemo
         static void Main(string[] args)
         {
             Console.OutputEncoding = _defaultEncoding;
-            Console.WriteLine($" This is my {FontStyles.Blink}Blinking {FontStyles.Invert}Inverted{FontStyles.Reset} text.");
+            Console.WriteLine($" This is my {Blink}Blinking {Invert}Inverted{Reset} text.");
             ReadKey("Press any key to see all.");
 
             ClearScreen();
@@ -37,7 +37,7 @@ namespace FontDemo
         }
         static void FontDemo()
         {
-            Assembly myAssembly = typeof(FontStyles).GetTypeInfo().Assembly;
+            Assembly myAssembly = typeof(Chizl.ConsoleFonts.FontStyles).GetTypeInfo().Assembly;
             Type[] typelist = GetTypesInNamespace(myAssembly, _styleStructNamespace)
                                     .Where(w => w.Name.Equals(_styleStructName)).ToArray();
 
@@ -46,17 +46,17 @@ namespace FontDemo
                 //Console.WriteLine();
                 foreach (var prop in typelist[0].GetProperties())
                 {
-                    if (!prop.Name.Equals(FontStyles.Reset.Name, StringComparison.CurrentCultureIgnoreCase) && prop.PropertyType.Equals(typeof(FontStyles)))
+                    if (!prop.Name.Equals(Reset.Name, StringComparison.CurrentCultureIgnoreCase) && prop.PropertyType.Equals(typeof(Chizl.ConsoleFonts.FontStyles)))
                     {
                         var fsValue = prop.GetValue(0);
-                        var fontStyle = (FontStyles)prop.GetValue(0);
-                        Console.Write($" This is my {fontStyle}{fontStyle.Name.ToUpper()}{FontStyles.Reset} format.");
-                        if (fontStyle.Name.Equals(FontStyles.Invisible.Name))
-                            Console.Write($" <-- {FontStyles.Invisible.Name.ToUpper()} ");
+                        var fontStyle = (Chizl.ConsoleFonts.FontStyles)prop.GetValue(0);
+                        Console.Write($" This is my {fontStyle}{fontStyle.Name.ToUpper()}{Reset} format.");
+                        if (fontStyle.Name.Equals(Invisible.Name))
+                            Console.Write($" <-- {Invisible.Name.ToUpper()} ");
                         Console.WriteLine();
                     }
-                    else if (prop.Name.Equals(FontStyles.Reset.Name, StringComparison.CurrentCultureIgnoreCase))
-                        Console.WriteLine($" {FontStyles.Reset.Name.ToUpper()} is only used after formatting.\n");
+                    else if (prop.Name.Equals(Reset.Name, StringComparison.CurrentCultureIgnoreCase))
+                        Console.WriteLine($" {Reset.Name.ToUpper()} is only used after formatting.\n");
                 }
             }
             Console.WriteLine();

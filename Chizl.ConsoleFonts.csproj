@@ -2,22 +2,35 @@
 
 		<PropertyGroup>
 				<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
-				<!--<TargetFrameworks>netstandard2.0;netstandard2.1;net47;net48;net6.0;net8.0;net9.0</TargetFrameworks>-->
 				<ImplicitUsings>disable</ImplicitUsings>
 				<Nullable>disable</Nullable>
-				<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-				<GenerateDocumentationFile>False</GenerateDocumentationFile>
+				<EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
 		</PropertyGroup>
 
 		<PropertyGroup>
 				<Authors>Chizl</Authors>
 				<PackageId>Chizl.ConsoleFonts</PackageId>
 				<Company>Chizl.com</Company>
-				<Copyright>© 2024 chizl.com</Copyright>
+				<Copyright>© 2024-2026 chizl.com</Copyright>
 				<PackageTags>console;font-style;font-color;emoji</PackageTags>
-				<FileVersion>6.02.11.2203</FileVersion>
-				<Version>6.02.11.0</Version>
-				<AssemblyVersion>6.02.0.0</AssemblyVersion>
+				<AssemblyVersion>6.0.0.0</AssemblyVersion>
+				<!-- Path +1 for each deploy to Nuget. -->
+				<Version>6.02.18.1</Version>
+				<!-- [Year-2020].Month.Day.HHmm (UTC). -->
+				<FileVersion>6.02.18.2133</FileVersion>
+				<!-- Uses by audit and system monitors. -->
+				<InformationalVersion>6.02.18.2133</InformationalVersion>
+
+				<!-- NuGet Package Metadata -->
+				<PackageReadmeFile>README.md</PackageReadmeFile>
+				<Description>A lightweight, cross-platform .NET library for adding **font styles** to Console applications using ANSI escape sequences.</Description>
+				<PackageProjectUrl>https://github.com/gavin1970/Chizl.ConsoleFonts</PackageProjectUrl>
+				<RepositoryUrl>https://github.com/gavin1970/Chizl.ConsoleFonts</RepositoryUrl>
+				<RepositoryType>git</RepositoryType>
+				<PackageLicenseExpression>MIT</PackageLicenseExpression>
+				<PackageIcon>ChizlConsoleFonts.png</PackageIcon>
+				<PackageReleaseNotes>See https://github.com/gavin1970/Chizl.ConsoleFonts/releases</PackageReleaseNotes>
+				<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		</PropertyGroup>
 
 		<ItemGroup>
@@ -26,18 +39,12 @@
 		</ItemGroup>
 
 		<ItemGroup>
-		  <Compile Update="ConsoleResources.Designer.cs">
-		    <DesignTime>True</DesignTime>
-		    <AutoGen>True</AutoGen>
-		    <DependentUpon>ConsoleResources.resx</DependentUpon>
-		  </Compile>
-		</ItemGroup>
-
-		<ItemGroup>
-		  <EmbeddedResource Update="ConsoleResources.resx">
-		    <Generator>ResXFileCodeGenerator</Generator>
-		    <LastGenOutput>ConsoleResources.Designer.cs</LastGenOutput>
-		  </EmbeddedResource>
+				<None Include="README.md" Pack="true" PackagePath="\">
+				  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+				</None>
+				<None Include="ChizlConsoleFonts.png" Pack="true" PackagePath="\">
+				  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+				</None>
 		</ItemGroup>
 
 </Project>

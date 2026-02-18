@@ -57,14 +57,14 @@ namespace Chizl
         /// <returns>8 byte Hex string.  AARRGGBB/#AARRGGBB e.g. (Green) FF00FF00/#FF00FF00</returns>
         internal static string ValidColorHex(this string input, bool addHash = false)
         {
-            //Strips everything not a-f, A-F or 0-9.
-            //This is to clean up any hex string that may have been passed in.
-            //For example, if the user passed in "#FF00FF00" or "0xFF00FF00", this will strip the non hex characters and return "FF00FF00".
+            // Strips everything not a-f, A-F or 0-9.
+            // This is to clean up any hex string that may have been passed in.
+            // For example, if the user passed in "#FF00FF00" or "0xFF00FF00", this will strip the non hex characters and return "FF00FF00".
             var r = new Regex("[^a-fA-F0-9]", _regexOptions);
             var retVal = r.Replace(input, "");
 
-            //if not 6 or 8 bytes, then this is an invalid RGB Hex string.
-            //return what was passed in.
+            // If not 6 or 8 bytes, then this is an invalid RGB Hex string.
+            // Return what was passed in.
             if (!retVal.Length.Equals(6) && !retVal.Length.Equals(8))
                 return input;
 
@@ -78,20 +78,3 @@ namespace Chizl
         }
     }
 }
-
-/*
-foreach (var rune in exampleString.EnumerateRunes())
-{
-    //unicode character
-    var charStr = rune.ToString();
-    Console.WriteLine($"Symbol/Character: {charStr}");
-    Console.WriteLine($"\tDecimal Value: {rune.Value}");
-    Console.WriteLine($"\tIsAscii: {rune.IsAscii}");
-    Console.WriteLine($"\tIsBmp: {rune.IsBmp}");
-    Console.WriteLine($"\tUtf8SequenceLength: {rune.Utf8SequenceLength}");
-    Console.WriteLine($"\tUtf16SequenceLength: {rune.Utf16SequenceLength}");
-    Console.WriteLine($"\tUnicodeCategory: {char.GetUnicodeCategory((char)rune.Value)}");
-    Console.WriteLine($"\tUnicodeCategory: {char.GetUnicodeCategory(charStr, 0)}");
-}
-*/
-
