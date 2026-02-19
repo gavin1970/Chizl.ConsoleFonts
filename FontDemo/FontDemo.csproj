@@ -7,6 +7,7 @@
 				<Nullable>disable</Nullable>
 				<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 				<GenerateDocumentationFile>True</GenerateDocumentationFile>
+				<IsPackable>false</IsPackable>
 		</PropertyGroup>
 
 		<ItemGroup>
