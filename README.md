@@ -122,7 +122,7 @@ Console.WriteLine($"Number: {style.NumberValue}"); // 1
 
 ## 📄 License
 
-© 2024 chizl.com
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/gavin1970/Chizl.ConsoleFonts/blob/master/docs/LICENSE.md) file for details.
 
 ---
 
