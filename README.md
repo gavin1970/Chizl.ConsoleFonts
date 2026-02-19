@@ -1,10 +1,17 @@
-﻿# Chizl.ConsoleFonts ![Latest Version](https://img.shields.io/nuget/v/Chizl.ConsoleFonts)
+﻿# Chizl.ConsoleFonts 
 <!-- ![logo](https://raw.githubusercontent.com/gavin1970/Chizl.ConsoleFonts/refs/heads/master/ChizlConsoleFonts_256x256.png) -->
+
+[![NuGet Version](https://img.shields.io/nuget/v/Chizl.ConsoleFonts)](https://www.nuget.org/packages/Chizl.ConsoleFonts)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/gavin1970/Chizl.ConsoleFonts/blob/master/LICENSE.md)
+[![.NET](https://img.shields.io/badge/.NET-Standard%202.0%20%7C%202.1%20-purple)](https://dotnet.microsoft.com/)
 
 A lightweight, cross-platform .NET library for adding **font styles** to console applications using ANSI escape sequences.
 
+---
+
 ![example](https://raw.githubusercontent.com/gavin1970/Chizl.ConsoleFonts/refs/heads/master/FontDemo/docs/example.gif)
 
+---
 ## 📦 Installation
 
 ### NuGet Package Manager
@@ -21,6 +28,8 @@ dotnet add package Chizl.ConsoleFonts
 ```
 > **Note:** Omitting the version attribute automatically uses the latest stable release. To pin a specific version, use `Version="x.x.x"`.
 
+---
+
 ## 🎯 Features
 
 - ✅ Simple, fluent API for console text styling
@@ -29,6 +38,8 @@ dotnet add package Chizl.ConsoleFonts
 - ✅ Zero dependencies
 - ✅ Lightweight and performant
 - ✅ Works with modern terminals that support ANSI escape sequences
+
+---
 
 ## 📖 Available Styles
 
@@ -44,6 +55,8 @@ dotnet add package Chizl.ConsoleFonts
 | `Invisible` | Hides text (same as background) | `{FontStyles.Invisible}text{FontStyles.Reset}` |
 | `Strike` | Adds strikethrough | `{FontStyles.Strike}text{FontStyles.Reset}` |
 | `Reset` | Resets all styles | `{FontStyles.Reset}` |
+
+---
 
 ## 💡 Usage Examples
 
@@ -66,6 +79,8 @@ Console.WriteLine($"This is my {FontStyles.Underline}{FontStyles.Blink}UNDERLINE
 Console.WriteLine($"Password: {FontStyles.Invisible}secret123{FontStyles.Reset}");
 ```
 
+---
+
 ## 🛠️ Properties
 
 Each `FontStyles` instance provides the following properties:
@@ -83,6 +98,8 @@ Console.WriteLine($"Value: {style.Value}");
 Console.WriteLine($"Number: {style.NumberValue}"); // 1
 ```
 
+---
+
 ## ⚙️ Requirements
 
 - **.NET Standard 2.0** or higher
@@ -92,6 +109,8 @@ Console.WriteLine($"Number: {style.NumberValue}"); // 1
   - Linux/macOS terminals ✅
   - Legacy Windows Command Prompt (limited support)
 
+---
+
 ## ⚠️ Important Notes
 
 1. **Always use `FontStyles.Reset`** after applying styles to avoid style bleeding into subsequent text
@@ -99,14 +118,20 @@ Console.WriteLine($"Number: {style.NumberValue}"); // 1
 3. **Blink support** varies by terminal (many modern terminals disable blinking)
 4. Set `Console.OutputEncoding = Encoding.UTF8;` for best compatibility
 
+---
+
 ## 📄 License
 
 © 2024 chizl.com
+
+---
 
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/gavin1970/Chizl.ConsoleFonts)
 - [NuGet Package](https://www.nuget.org/packages/Chizl.ConsoleFonts)
+
+---
 
 ## 🤝 Contributing
 

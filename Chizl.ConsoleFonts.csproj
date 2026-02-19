@@ -15,7 +15,7 @@
 				<PackageTags>console;font-style;font-color;emoji</PackageTags>
 				<AssemblyVersion>6.0.0.0</AssemblyVersion>
 				<!-- Path +1 for each deploy to Nuget. -->
-				<Version>6.02.18.1</Version>
+				<Version>6.02.19.1</Version>
 				<!-- [Year-2020].Month.Day.HHmm (UTC). -->
 				<FileVersion>6.02.18.2133</FileVersion>
 				<!-- Uses by audit and system monitors. -->
