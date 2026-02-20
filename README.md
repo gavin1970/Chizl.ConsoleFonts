@@ -1,9 +1,11 @@
 ﻿# Chizl.ConsoleFonts 
 <!-- ![logo](https://raw.githubusercontent.com/gavin1970/Chizl.ConsoleFonts/refs/heads/master/ChizlConsoleFonts_256x256.png) -->
 
-[![NuGet Version](https://img.shields.io/nuget/v/Chizl.ConsoleFonts)](https://www.nuget.org/packages/Chizl.ConsoleFonts)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/gavin1970/Chizl.ConsoleFonts/blob/master/LICENSE.md)
-[![.NET](https://img.shields.io/badge/.NET-Standard%202.0%20%7C%202.1%20-purple)](https://dotnet.microsoft.com/)
+[![NuGet Version](https://img.shields.io/nuget/v/Chizl.ConsoleFonts.svg)](https://www.nuget.org/packages/Chizl.ConsoleFonts/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/gavin1970/Chizl.ConsoleFonts/blob/master/LICENSE.md)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Chizl.ConsoleFonts)](https://www.nuget.org/packages/Chizl.ConsoleFonts/)<br/>
+[![Target Frameworks](https://img.shields.io/badge/target%20frameworks-netstandard2.0%20%7C%20netstandard2.1%20%7C%20net48%20%7C%20net8.0-purple)](https://dotnet.microsoft.com/)
+
 
 A lightweight, cross-platform .NET library for adding **font styles** to console applications using ANSI escape sequences.
 
